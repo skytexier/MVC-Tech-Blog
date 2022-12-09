@@ -17,7 +17,7 @@ Comment.init(
        },
        comment_body: {
         type: DataTypes.CHAR(250),
-        allowNull: false,
+        allowNull: true,
        },
        user_id: {
         type: DataTypes.INTEGER,
@@ -30,8 +30,8 @@ Comment.init(
             references: {
                 model: 'post',
                 key: 'id'
-            }
-       },
+            },
+        },
        posted_time: {
         type: DataTypes.STRING,
         defaultValue: moment().format('MMMM Do YYYY, h:mm a'),

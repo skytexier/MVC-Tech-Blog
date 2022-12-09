@@ -31,13 +31,6 @@ Post.init(
         defaultValue: moment().format('MMMM Do YYYY, h:mm a'),
         allowNull: true,
        },
-       comments: {
-        type: DataTypes.STRING,
-        references: {
-            model: 'comment',
-            key: 'id'
-        }
-       }
     },
     {
         sequelize,
