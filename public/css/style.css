@@ -1,0 +1,59 @@
+body {
+    background-image: linear-gradient(90deg,#06515f,#5e62b0,#dc307db7);
+}
+.btn-group{
+    margin: .25rem;
+}
+
+.form-inline {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-content  {
+    margin-top: .5rem;
+}
+
+.comment-content p {
+    margin: 1rem;
+}
+
+.comment-delete {
+    display: flex;
+}
+
+.user-identity {
+    display: flex;
+    padding: .25rem;
+}
+
+.user-identity h5 {
+    padding-left: .5rem;
+}
+
+.user-img img {
+    height: 50px;
+    width: 50px;
+}
+
+.button-options {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.comment-input {
+    display: flex;
+}
+
+.bg-warning {
+    background-color: white;
+    opacity: 50%;
+}

@@ -1,0 +1,20 @@
+<div class="container col-auto">
+{{#if loggedIn}}
+      <div class="d-flex justify-content-center container mb-2">
+        <div class="d-flex align-items-center alert alert-primary p-2">
+        <img src="{{user.user_avatar}}" width="50" height="50" class="user-img" alt=""> 
+        <p class="m-2">Hello {{user.username}}!</p>
+        <a class="nav-link" href="/Createpost">
+        <button type="button" class="btn btn-secondary btn-lg ml-4">Make a post!</button>
+        </a>
+        </div>
+      </div>
+  {{else}}
+<div class="alert alert-info">
+ <a href="/login" class="nav-link">
+ <h4 class="d-flex justify-content-center m-0 text-info">Log in to make a post!</h4>
+ </a>
+</div>
+
+{{/if}}
+</div>

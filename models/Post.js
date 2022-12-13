@@ -24,7 +24,11 @@ Post.init(
         references: {
             model: 'users',
             key: 'id'
-        }
+        },
+       },
+       votes: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
        },
        posted_time: {
         type: DataTypes.STRING,

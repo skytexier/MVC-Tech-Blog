@@ -1,0 +1,38 @@
+<div class="card rounded-lg mb-4">
+  <div class="card-header align-items-center justify-content-between border-light user-identity user-img mb-10">
+    <div class="d-flex">
+    <img src="{{user.user_avatar}}" class="img-fluid user-img" alt="" />
+    <h5 class="mt-1">{{user.username}}</h5>
+    </div>
+        <p class="m-0">{{posted_time}}</p>
+  </div>
+  
+  
+  <div class="card-body p-2">
+    <div class="row">
+        <div class="card-content col flex-row flex-wrap justify-content-between">
+      {{#if post_links}}
+<iframe width="auto" src="https://www.youtube.com/embed/{{post_links}}" title="{{user.username}} uploaded video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      {{/if}}
+      {{#if post_image}}
+        <img src="{{post_image}}" width="250" height="250" class="img-thumbnail" alt="{{user.username}} uploaded image"/>
+      {{/if}}
+      <p class="pl-2 pr-2 col">{{post_body}}
+      </p>
+      <div class="col button-options align-items-center">
+        <button type="submit" id="downvote" class="btn-group btn btn-outline-light">
+          {{votes}}
+          </button>
+        <form action="/upvotes" method="post">
+        <button type="submit" name="post_id" value="{{id}}" class="btn-group btn-upvote-comment btn btn-outline-success">
+          <i class="fa-solid fa-circle-arrow-up"></i></button>
+          </form>
+        <form action="/upvotes" method="post">
+        <button type="button" class="btn-group btn-delete-comment btn btn-outline-dark">
+          <i class="fa-solid fa-trash-can"></i>
+          </button>
+          </form>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -13,6 +13,7 @@ Post.belongsTo(User, {
 });
 
 Post.hasMany(Comment, {
+    //Needs to be blank for some reason otherwise cannot find column
 });
 
 Comment.belongsTo(Post, {

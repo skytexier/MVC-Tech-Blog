@@ -1,0 +1,19 @@
+<div class="container rounded-lg">
+    {{>usertool}}
+    {{#each userHome}}
+    {{> post}}
+    <div class="container card-footer mb-0  comment-container border-secondary"> 
+    {{#if userHome.comment}}  
+    <div class="card-footer bg-dark user-img">   
+    {{> comment}}
+    </div>
+    {{/if}}
+
+    {{> writecomment}}
+    </div>
+    </div>
+    
+    <div>
+    {{/each}}
+    </div>
+</div>

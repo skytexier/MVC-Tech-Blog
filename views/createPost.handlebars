@@ -1,0 +1,36 @@
+{{#if loggedIn}}
+<div class="d-flex container justify-content-center">
+<div class="card col-lg-8 col-md-11 col-sm-12 d-flex justify-content-center">
+    <div class="m-1">
+      <div class="mt-2 col-md-offset-3">
+        
+         <div class="d-flex">
+          
+        <img src="{{user.user_avatar}}" width="50" height="50" class="user-img" alt=""> 
+        <p class="m-2">{{user.username}}</p>
+       </div>
+       <h2 class="mt-2">Create your SafeSpace Post</h2>
+        <form class="post">
+          <div class="form-group">
+            <label for="inputPost"></label>
+            <input type="post" class="form-control col-auto" id="post-input"  placeholder="Write your post here">
+          </div>
+          <div class="form-group">
+            <label for="inputLink">Video Links</label>
+            <input type="link" class="form-control" id="video-input" placeholder="YouTube links only">
+          </div>
+            <div class="form-group">
+            <label for="inputImage">Image Links</label>
+            <input type="link" class="form-control" id="image-input" placeholder="Link your image here!">
+          </div>
+          <button type="submit" class="btn btn-dark">Post</button>
+        </form>
+        <br />
+    
+      </div>
+    </div>
+  </div>
+  </div>
+<script type="text/javascript" src="./js/post.js"></script>
+{{else}}
+{{/if}}

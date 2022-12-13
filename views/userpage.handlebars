@@ -1,0 +1,17 @@
+{{!-- individual user page and post --}}
+<h1>{{username}}</h1>
+<div class="container rounded-lg">
+    {{#each userPosts}}
+    {{> userpageposts}} 
+    <div class="container card-footer mb-0  comment-container border-dark bg-secondary">
+<div class="card-footer bg-dark user-img">      
+    {{> comment}} 
+</div>
+    {{> writecomment}}
+    </div>
+    </div>
+    
+    <div>
+    {{/each}}
+    </div>
+</div>

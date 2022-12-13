@@ -1,0 +1,64 @@
+{{!-- container for sign up form --}}
+<div class="d-flex container justify-content-center">
+  <div class="card col-lg-7 col-md-10 col-sm-11 d-flex justify-content-center">
+
+    <div class="row">
+      <div class="col-md-offset-3 m-1">
+        <h2 class="mt-2">Sign Up Form</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="InputUsername">Username</label>
+            <input
+              type="Username"
+              class="form-control"
+              id="username-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="InputEmail">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="InputPassword">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="InputAvatar">Link an image to use as your avatar!</label>
+            <input
+              type="avatar"
+              class="form-control"
+              id="avatar-input"
+              placeholder="Copy image address from the image"
+            />
+          </div>
+          <div
+            style="display: none"
+            id="alert"
+            class="alert alert-danger"
+            role="alert"
+          >
+            <span
+              class="glyphicon glyphicon-exclamation-sign"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Error:</span>
+            <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-dark" id="signup">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a href="/login">here</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="./js/signup.js"></script>
