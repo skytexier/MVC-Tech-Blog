@@ -1,4 +1,36 @@
 <form class="form-group comment-input col-auto m-0 pt-2 align-items-center">
-  <input type="text" class="form-control mr-5" placeholder="Write a Comment" id="inputDefault">
-  <button class="btn btn-outline-success col-lg-2 col-md-3 col-sm-4 comment-btn" type="submit">Submit</button>
+  <input type="text" class="form-control mr-5" placeholder="Write a Comment" id="comment-input">
+  <button class="btn btn-outline-success col-lg-2 col-md-3 col-sm-4 comment-btn" type="submit" onclick=submitComment()>Submit</button>
 </form>
+<script>
+  function submitComment() {
+    // Get the value of the comment textarea
+    var commentText = document.getElementById('comment-input').value;
+    var postId = document.getElementById()
+
+    // Send a POST request to the server to create the comment
+    fetch('/createComment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text: commentText
+      })
+    })
+    .then(response => {
+      // Handle the response from the server
+      if (response.ok) {
+        // Comment was successfully created
+        console.log('Comment was successfully created');
+      } else {
+        // There was an error creating the comment
+        console.error('Error creating comment');
+      }
+    });
+  }
+</script>
+
+
+
+

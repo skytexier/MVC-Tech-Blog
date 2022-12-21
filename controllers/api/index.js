@@ -7,6 +7,7 @@ const signupRoutes = require('./signup');
 const logoutRoutes = require('./logout');
 const makePost = require('./createPost');
 const upvotes = require('./upvotes');
+const createComment = require('./createComment');
 // router for all api links
 router.use('/user', userRoutes);
 router.use('/login', loginRoutes);
@@ -15,5 +16,6 @@ router.use('/signup', signupRoutes);
 router.use('/createPost', makePost)
 router.use('/upvotes', upvotes)
 router.use('/', homeRoutes);
+router.use('/createComment', createComment)
 
 module.exports = router;
